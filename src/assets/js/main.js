@@ -27,10 +27,10 @@ function render() {
   const batFile = generateBatFile(nodes);
 
   // Remove existing click event listener from download button
-  $downloadBtn.removeEventListener('click', downloadBatFile);
+  $downloadBtn.removeEventListener(clickEvent);
 
   // Add event listener to download button
-  $downloadBtn.addEventListener('click', downloadBatFile.bind(null, batFile));
+  let clickEvent = $downloadBtn.addEventListener('click', () => downloadBatFile(batFile));
 }
 
 /**
