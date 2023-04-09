@@ -7,12 +7,15 @@ const $copyBtn = document.querySelector('#copy');
 // Events
 $input.addEventListener('input', render);
 $copyBtn.addEventListener('click', () => copyToClipboard($output));
+$downloadBtn.addEventListener('click', () => downloadBatFile(globalBatFile));
 
 // Logic
 const regex = {
   newline: /\r?\n/,
   lineStructure: /^(#+)\s*(.+)$/, // ^(group of ###) (group of anything)$
 };
+
+let globalBatFile;
 
 /**
 Renders the output based on the input text and sets up the download button for the generated batch file.
@@ -24,13 +27,7 @@ function render() {
   $output.textContent = output;
 
   // Generate batFile and combine commands into a single string
-  const batFile = generateBatFile(nodes);
-
-  // Remove existing click event listener from download button
-  $downloadBtn.removeEventListener(clickEvent);
-
-  // Add event listener to download button
-  let clickEvent = $downloadBtn.addEventListener('click', () => downloadBatFile(batFile));
+  globalBatFile = generateBatFile(nodes);
 }
 
 /**
