@@ -1,7 +1,72 @@
+// screens
+$breakpoints: (
+  sm: 767px,
+  md: 991px,
+  lg: 1100px,
+);
+
+// mobileScreen
+@mixin smMin {
+  @media (min-width: map-get($breakpoints,sm)) {
+    @content;
+  }
+}
+
+@mixin smMax {
+  @media (max-width: map-get($breakpoints,sm)) {
+    @content;
+  }
+}
+
+//midScreen
+@mixin mdMin {
+  @media (min-width: map-get($breakpoints,md)) {
+    @content;
+  }
+}
+
+@mixin mdMax {
+  @media (max-width: map-get($breakpoints,md)) {
+    @content;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.4375rem;
+
+  &-track {
+    background-color: white;
+  }
+
+  &-thumb {
+    background-color: #4caf50;
+
+    &:hover {
+      background-color: #3e8e41;
+    }
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  font-size: 16px;
+
+  @include mdMax {
+    font-size: 14px;
+  }
+
+  @include smMax {
+    font-size: 12px;
+  }
 }
 
 body {
@@ -13,7 +78,7 @@ body {
   display: flex;
   align-items: stretch;
 
-  @media (max-width: 47.9375rem) {
+  @include smMax {
     flex-direction: column;
   }
 }
@@ -23,6 +88,7 @@ body {
   background-color: rgba(0, 0, 0, 0.08);
   margin: 0.5rem;
   padding: 0.5rem;
+  overflow: auto;
 
   .buttons {
     position: absolute;
@@ -44,10 +110,7 @@ body {
       cursor: pointer;
       text-transform: capitalize;
 
-      &:hover {
-        background-color: #3e8e41;
-      }
-
+      &:hover,
       &:active {
         background-color: #3e8e41;
       }
