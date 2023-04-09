@@ -84,10 +84,14 @@ body {
 }
 
 .output-container {
-  position: relative;
   background-color: rgba(0, 0, 0, 0.08);
   margin: 0.5rem;
   padding: 0.5rem;
+  position: static;
+
+  @include smMax {
+    position: relative;
+  }
 
   .buttons {
     position: absolute;
@@ -114,10 +118,10 @@ body {
         background-color: #3e8e41;
       }
     }
+  }
 
-    #output {
-      overflow: auto;
-    }
+  #output {
+    overflow: auto;
   }
 }
 
@@ -129,7 +133,7 @@ body {
   margin: 0.5rem;
   padding: 0.5rem;
   min-height: 25rem;
-  min-width: 50%;
+  min-width: 40%;
 }
 
 #input {
