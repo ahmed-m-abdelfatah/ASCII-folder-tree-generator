@@ -88,7 +88,6 @@ body {
   background-color: rgba(0, 0, 0, 0.08);
   margin: 0.5rem;
   padding: 0.5rem;
-  overflow: auto;
 
   .buttons {
     position: absolute;
@@ -114,6 +113,10 @@ body {
       &:active {
         background-color: #3e8e41;
       }
+    }
+
+    #output {
+      overflow: auto;
     }
   }
 }
