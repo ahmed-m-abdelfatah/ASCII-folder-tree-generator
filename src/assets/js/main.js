@@ -126,11 +126,9 @@ Downloads a .bat file.
 @param {string[]} batFile - An array of strings containing the contents of the .bat file to be downloaded.
 */
 function downloadBatFile(batFile) {
-  // If you wank to download elegant file (optional)
-  // const joinedBatFile = batFile.join('\n');
-  // const blob = new Blob([joinedBatFile], { type: 'text/plain' });
+  const joinedBatFile = batFile.join('\n');
 
-  const blob = new Blob([batFile], { type: 'text/plain' });
+  const blob = new Blob([joinedBatFile], { type: 'text/plain' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -143,6 +141,8 @@ function downloadBatFile(batFile) {
 
 // Set the initial input text and render it.
 $input.value = `
+This folder structure is recommended for structure designer engineer
+
 # BIM Folder tree
 ## WIB (Work in progress)
 ### _DATA
@@ -151,13 +151,12 @@ $input.value = `
 #### SAFE
 #### ETABS
 ### REPORT
-### RVT (Revit)
+### RVT
 ### TEKLA
-### CAD (Autocad)
+### CAD
 ## EIP (Employers Information Requirements)
 ### YYMMDD-FOLDER NAME 1
 ### YYMMDD-FOLDER NAME 2
-### YYMMDD-FOLDER NAME 3
 ## PUBLISHED
 ### CALCULATIONS
 #### SAP
