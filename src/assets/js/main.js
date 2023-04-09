@@ -26,8 +26,11 @@ function render() {
   // Generate batFile and combine commands into a single string
   const batFile = generateBatFile(nodes);
 
+  // Remove existing click event listener from download button
+  $downloadBtn.removeEventListener('click', downloadBatFile);
+
   // Add event listener to download button
-  $downloadBtn.addEventListener('click', () => downloadBatFile(batFile));
+  $downloadBtn.addEventListener('click', downloadBatFile.bind(null, batFile));
 }
 
 /**
