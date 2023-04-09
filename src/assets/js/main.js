@@ -142,6 +142,7 @@ function downloadBatFile(batFile) {
 // Set the initial input text and render it.
 $input.value = `
 This folder structure is useful for civil engineers (designers) who working with BIM.
+
 Notes:
 [1] WIB (Work in progress)
 [2] EIP (Employers Information Requirements)
@@ -149,7 +150,7 @@ Notes:
 [4] CAD (Autocad)
 [5] DWG (Autocad)
 
-# BIM Folder tree
+# PROJECT NAME
 ## WIB
 ### CALCULATIONS
 #### SAP
