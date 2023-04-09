@@ -1,0 +1,36 @@
+{
+  "author": {
+    "Linkedin": "https://www.linkedin.com/in/ahmed-m-abdelfatah",
+    "name": "Ahmed Abdelfatah"
+  },
+  "browserslist": [
+    "last 4 versions",
+    "> 2%",
+    "IE 10"
+  ],
+  "description": "Project Starter",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0",
+    "sass": "^1.56.1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "name": "arab_bureau",
+  "scripts": {
+    "dev": "gulp",
+    "final": "gulp final"
+  },
+  "version": "1.0.0"
+}
