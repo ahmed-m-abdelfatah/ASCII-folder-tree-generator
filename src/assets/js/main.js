@@ -142,6 +142,7 @@ function downloadBatFile(batFile) {
 // Set the initial input text and render it.
 $input.value = `
 This folder structure is recommended for structure designer engineer
+This folder structure is useful for civil engineers who working with BIM
 
 # BIM Folder tree
 ## WIB (Work in progress)
