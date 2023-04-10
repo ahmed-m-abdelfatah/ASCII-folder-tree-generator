@@ -144,14 +144,14 @@ $input.value = `
 This folder structure is useful for civil engineers (designers) who working with BIM.
 
 Notes:
-[1] WIB (Work in progress)
+[1] WIP (Work in progress)
 [2] EIP (Employers Information Requirements)
 [3] RVT (Revit)
 [4] CAD (AutoCAD)
 [5] DWG (AutoCAD)
 
 # PROJECT NAME
-## WIB
+## WIP
 ### CALCULATIONS
 #### SAP
 #### SAFE
