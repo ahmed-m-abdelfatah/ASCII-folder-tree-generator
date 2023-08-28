@@ -141,66 +141,53 @@ function downloadBatFile(batFile) {
 
 // Set the initial input text and render it.
 $input.value = `
-This folder structure is useful for civil engineers (designers) who working with BIM.
+This folder structure is useful for civil engineers (Structural Designers).
 
 Notes:
 [1] WIP (Work in progress)
-[2] EIP (Employers Information Requirements)
+[2] EIR (Employers Information Requirements)
 [3] RVT (Revit)
 [4] CAD (AutoCAD)
 [5] DWG (AutoCAD)
 [6] SS# (Superseded)
+[7] CAL (Calculations)
 
-# PROJECT NAME
-## EIP
-### YYMMDD-FOLDER NAME 1
-### YYMMDD-FOLDER NAME 2
-## PUBLISHED
-### CALCULATIONS
-#### SAP
-#### SAFE
-#### ETABS
-### DWG
-### PDF
-### REPORT
-### REVIT IFC
-
-##SS1
-### EIP
-#### YYMMDD-FOLDER NAME 1
-#### YYMMDD-FOLDER NAME 2
-### PUBLISHED
-#### CALCULATIONS
-##### SAP
-##### SAFE
-##### ETABS
-#### DWG
-#### PDF
-#### REPORT
-#### REVIT IFC
-### WIP
-##### _DATA
-#### CALCULATIONS
-##### SAP
-##### SAFE
-##### ETABS
-##### EXCEL
-#### REPORT
-#### RVT
-#### TEKLA
-#### CAD
-
+# CAD PROJECT
+## _DATA
+## EIR
+### YYYY-MM-DD-FOLDER NAME 1
 ## WIP
-#### _DATA
-### CALCULATIONS
-#### SAP
-#### SAFE
 #### ETABS
-#### EXCEL
-### REPORT
-### RVT
-### TEKLA
-### CAD
+#### FRAME
+#### PDF
+#### SAFE
+#### SAP
+
+# REVIT PROJECT
+## _DATA
+## EIR
+### YYYY-MM-DD-FOLDER NAME 1
+## WIP
+#### CAD
+##### FRAME
+#### ETABS
+#### PDF
+#### RVT
+#### SAFE
+#### SAP
+
+# TEKLA PROJECT
+## _DATA
+## EIR
+### YYYY-MM-DD-FOLDER NAME 1
+## WIP
+#### CAD
+##### FRAME
+#### ETABS
+#### PDF
+#### SAFE
+#### SAP
+#### TEKLA
 `.trim();
 
 render();
